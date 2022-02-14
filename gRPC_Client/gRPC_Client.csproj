@@ -4,7 +4,12 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
   <ItemGroup>
+    <None Remove="Protos\customers.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="Protos\customers.proto" GrpcServices="Client" />
     <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
   </ItemGroup>
 
