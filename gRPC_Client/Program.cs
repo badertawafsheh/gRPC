@@ -21,6 +21,7 @@ namespace gRPC_Client
             //var reply = await client.SayHelloAsync(input);
             //Console.WriteLine($"Greetings : {reply.Message}");
             //Console.WriteLine("press any key to exit");
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
             var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var CustomerClient = new Customer.CustomerClient(channel);
