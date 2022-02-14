@@ -34,31 +34,31 @@ namespace gRPC_Client_Server.Services
             return Task.FromResult(output);
         }
     }
-    //    public override async Task GetNewCustomers(newCustomerRequest request,IServerStreamWriter<customerModel> responseStream, ServerCallContext context)
-    //    {
-    //    List<customerModel> customers = new List<customerModel>
-    //    {
-    //        new customerModel{
-    //            FirstName ="bader",
-    //            LastName ="Tawafsheh" ,
-    //            EmailAddress="bader.tawafsheh@exalt.ps",
-    //            Age=22,
-    //            IsAlive=true,
-    //        },
-    //         new customerModel{
-    //            FirstName ="nader",
-    //            LastName ="Tawafsheh" ,
-    //            EmailAddress="nader.tawafsheh@gmail.com",
-    //            Age=23,
-    //            IsAlive=true,
-    //        },
-    //    };
-    //    foreach (var customer in customers)
-    //    {
-    //        await responseStream.WriteAsync(customer);
+        public override async Task GetNewCustomers(newCustomerRequest request,IServerStreamWriter<customerModel> responseStream, ServerCallContext context)
+        {
+        List<customerModel> customers = new List<customerModel>
+        {
+            new customerModel{
+                FirstName ="bader",
+                LastName ="Tawafsheh" ,
+                EmailAddress="bader.tawafsheh@exalt.ps",
+                Age=22,
+                IsAlive=true,
+            },
+             new customerModel{
+                FirstName ="nader",
+                LastName ="Tawafsheh" ,
+                EmailAddress="nader.tawafsheh@gmail.com",
+                Age=23,
+                IsAlive=true,
+            },
+        };
+        foreach (var customer in customers)
+        {
+            await responseStream.WriteAsync(customer);
 
-    //    }
-    //}
+        }
+    }
 
 
 
