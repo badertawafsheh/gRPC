@@ -22,6 +22,6 @@ message newCustomerRequest{
 
 }
 /*
-to return a multiple using stream 
-to returen an array using repeated or repeats
+to return a multiple use stream 
+to returen an array use repeated or repeats
 */

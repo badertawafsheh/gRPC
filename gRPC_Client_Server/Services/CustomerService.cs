@@ -1,10 +1,11 @@
 ﻿using Grpc.Core;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace gRPC_Client_Server.Services
 {
-    public class CustomerService: Customer.CustomerBase
+    public class CustomerService : Customer.CustomerBase
     {
         private readonly ILogger<CustomerService> _logger;
 
@@ -32,7 +33,10 @@ namespace gRPC_Client_Server.Services
             }
             return Task.FromResult(output);
         }
-    }   
+    }
+
+
+
 
 
 }

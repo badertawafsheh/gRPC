@@ -4,7 +4,7 @@ option csharp_namespace = "gRPC_Client_Server";
 
 service Customer{
 	rpc GetCustomerInfo (CustomerLookUpModel) returns (customerModel)  ;
-
+	rpc GetNewCustomer (newCustomerRequest) returns (customerModel) ; 
 }
 message CustomerLookUpModel{
 	int32 userId=1;
@@ -18,3 +18,10 @@ message customerModel{
 	bool isAlive=4 ;
 	int32 age=5 ; 
 }
+message newCustomerRequest{
+
+}
+/*
+to return a multiple using stream 
+to returen an array using repeated or repeats
+*/
